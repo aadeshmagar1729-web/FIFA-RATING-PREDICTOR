@@ -110,10 +110,4 @@ def predict_csv_view(request):
 
 @api_view(["GET"])
 def history_view(request):
-    """
-    GET /api/history/
-    Returns the most recent predictions (latest 50), newest first.
-    """
-    history = PredictionHistory.objects.all()[:50]
-    serializer = PredictionHistorySerializer(history, many=True)
-    return Response(serializer.data, status=status.HTTP_200_OK)
+    return Response({"message": "Backend is working"})
