@@ -23,10 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wi5&kr8*=0mclq0_6ej0-&ea0bx%0wps9k_k_-ubvt_!=(0-fu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    "fifa-rating-predictor-production.up.railway.app",
+    "localhost",
+    "127.0.0.1",
+]
 
 # Application definition
 
