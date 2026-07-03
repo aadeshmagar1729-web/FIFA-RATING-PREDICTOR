@@ -35,12 +35,12 @@ def predict_single_view(request):
         )
 
     history_entry = PredictionHistory.objects.create(
-        player_name=data.get("player_name", "Unknown Player"),
-        team=data.get("team", ""),
-        position=data.get("position", ""),
-        input_data=data,
-        predicted_rating=rating,
-    )
+    player_name=data.get("player_name", "Unknown Player"),
+    team=data.get("team", ""),
+    position=data.get("position", ""),
+    input_data=dict(data),
+    predicted_rating=rating,
+)
 
     return Response(
         {
